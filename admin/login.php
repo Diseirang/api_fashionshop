@@ -1,10 +1,10 @@
 <?php
 include "../connection.php";
 
-$adminPhone = $_POST['admin_phone'] ?? null;
-$adminPassword = $_POST['admin_password'] ?? null;
+$admin_name = $_POST['admin_name'] ?? null;
+$admin_password = $_POST['admin_password'] ?? null;
 
-$sqlQuery = "SELECT * FROM admin_tbl WHERE admin_phone = '$adminPhone' AND admin_password='$adminPassword'";
+$sqlQuery = "SELECT * FROM admin_tbl WHERE admin_name = '$admin_name' AND admin_password='$admin_password'";
 
 $resultOfQuery = $conn->query($sqlQuery);
 

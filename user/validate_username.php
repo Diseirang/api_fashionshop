@@ -15,4 +15,3 @@ else
 {
     echo json_encode(array('usernameFound'=>false));
 }
-

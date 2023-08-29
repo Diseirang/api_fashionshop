@@ -1,10 +1,10 @@
 <?php
 include "../connection.php";
 
-$userPhone = $_POST['user_phone']??null;
-$userPassword = md5($_POST['user_password']??null);
+$user_name = $_POST['user_name']??null;
+$user_password = md5($_POST['user_password']??null);
 
-$sqlQuery = "SELECT * FROM users_tbl WHERE user_phone = '$userPhone' AND user_password='$userPassword'";
+$sqlQuery = "SELECT * FROM users_tbl WHERE user_name = '$user_name' AND user_password='$user_password'";
 
 $resultOfQuery = $conn-> query($sqlQuery);
 
