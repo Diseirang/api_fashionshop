@@ -2,7 +2,7 @@
 include "../connection.php";
 
 $currentOnlineUserID = $_POST['currentOnlineUserID'] ?? null;
-$sqlQuery = "SELECT * FROM cart_tbl CROSS JOIN items_tbl WHERE cart_tbl.user_id = $currentOnlineUserID AND cart_tbl.item_id = items_tbl.item_id";
+$sqlQuery = "SELECT * FROM cart_tbl CROSS JOIN items_tbl WHERE cart_tbl.user_id = '$currentOnlineUserID' AND cart_tbl.item_id = items_tbl.item_id";
 
 $resultOfQuery = $conn->query($sqlQuery);
 
